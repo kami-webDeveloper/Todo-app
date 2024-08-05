@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script type="module" defer src="src/js/control.js"></script>
+  </head>
+  <body>
+    <p id="message-error" class="hidden">Input can't be empty!</p>
+    <div class="app">
+      <div class="container">
+        <div class="wrapper">
+          <input
+            class="input-add-task"
+            type="text"
+            placeholder="Task to do..."
+          />
+          <button class="btn-add">Add</button>
+        </div>
+        <p class="pending-task">
+          You have <span class="count-task">0</span> task(s) to do.
+        </p>
+        <div class="tasks"></div>
+      </div>
+    </div>
+    <div class="overlay hidden">
+      <div class="modal-edit">
+        <box-icon
+          class="icon-close-modal"
+          color="#ff5e5e"
+          type="solid"
+          name="x-circle"
+        ></box-icon>
+        <p class="title-edit">Edit task</p>
+        <input class="input-edit-task" type="text" placeholder="New title..." />
+        <div class="container-modal-buttons">
+          <button class="cancel-edit">
+            <box-icon color="#fff" name="x"></box-icon> Cancel
+          </button>
+          <button class="submit-edit">
+            <box-icon color="#fff" name="check"></box-icon> Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
