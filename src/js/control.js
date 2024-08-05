@@ -77,7 +77,6 @@ const renderTasks = function (tasks = state.tasksList) {
     )
     .join("");
 
-  renderSpinner();
   containerTasks.innerHTML = "";
   containerTasks.insertAdjacentHTML("beforeend", markup);
   state.pendingTasks = state.tasksList.filter((task) => !task.completed).length;
@@ -161,6 +160,7 @@ const init = function () {
   containerApp.addEventListener("click", markTask);
   btnSubmitEdit.addEventListener("click", editTask);
   window.addEventListener("load", loadTasksFromLocal);
+  renderSpinner();
   closeEditModal();
 };
 
